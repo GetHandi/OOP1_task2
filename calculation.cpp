@@ -21,7 +21,7 @@ double* fill_array(double* a, unsigned size)
 ///выводит массив в консоль в формате "число * = **.**;
 ///a - ссылка на массив;
 ///size - размер массива;
-void print_array(double* a, unsigned size)
+void print_array(double *a, unsigned size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -29,31 +29,17 @@ void print_array(double* a, unsigned size)
 	}
 }
 
-///возвращает фактоориал числа i;
-///i - целое положительное число;
-int factorial(unsigned i)
-{
-	if (i < 0)
-	{
-		return 0;
-	}
-	if (i == 1)
-	{
-		return 1;
-	}
-	else
-		return i * factorial(i - 1);
-
-}
 
 ///возвращает массив с вычисленными выражениями: сумма числа массива + факториал его порядкового номера;
 ///a - ссылка на массив;
 ///size - размер массива;
-double* calculate(double* a, unsigned size)
+double* calculate(double *a, unsigned size)
 {
-	for (int i = 0; i < size; i++)
+	int f = 1;
+	for (int i = 1; i <= size; i++)
 	{
-		a[i] += factorial(i + 1);
+		a[i-1] += f;
+		f *= (i + 1);
 	}
 	return a;
 }

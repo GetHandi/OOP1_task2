@@ -7,13 +7,9 @@ double* fill_array(double *a, unsigned size);
 ///выводит массив в консоль в формате "число * = **.**;
 ///a - ссылка на массив;
 ///size - размер массива;
-void print_array(double* a, unsigned size);
-
-///возвращает фактоориал числа i;
-///i - целое положительное число;
-int factorial(unsigned i);
+void print_array(double *a, unsigned size);
 
 ///возвращает массив с вычисленными выражениями: сумма числа массива + факториал его порядкового номера;
 ///a - ссылка на массив;
 ///size - размер массива;
-double* calculate(double* a, unsigned size);
+double* calculate(double *a, unsigned size);
